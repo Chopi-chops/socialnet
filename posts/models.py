@@ -9,6 +9,8 @@ class Publication(models.Model):
         to=User,
         verbose_name="Автор",
         on_delete=models.CASCADE,
+        blank=True,
+        null=True,
     )
     created_at = models.DateTimeField(verbose_name="Дата создания", auto_now_add=True)
     updated_at = models.DateTimeField(verbose_name="Дата обновления", auto_now=True)

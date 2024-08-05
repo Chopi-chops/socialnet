@@ -9,3 +9,11 @@ class PostSerializer(serializers.ModelSerializer):
 
         model = Publication
         fields = ['title', 'content', 'author', 'created_at', 'updated_at']
+
+
+class PostCreateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Publication
+        fields = ['title', 'content', 'author']
+
+
