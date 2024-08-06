@@ -19,6 +19,6 @@ urlpatterns = [
     path('delete/<int:pk>/', PostDelete.as_view(), name='post-delete'),
 
     path('v3/', include(post_router.urls)),
-    path('v4/', include(like_router.urls)),
-    path('v5/', include(dislike_router.urls)),
+    path('likes/', include(like_router.urls)),
+    path('dislikes/', include(dislike_router.urls)),
 ]
