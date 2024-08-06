@@ -27,7 +27,7 @@ class PostCreate(APIView):
         if serializer.is_valid():
             serializer.save()
             return Response("Created", status=201)
-        return Response("Error", status=400)
+        return Response(serializer.errors, status=400)
 
 
 class PostUpdate(APIView):
